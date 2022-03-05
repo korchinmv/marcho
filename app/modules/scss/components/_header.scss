@@ -1,6 +1,104 @@
 .header {
-  display: block;
-  width: 300px;
-  height: 500px;
-  background-color: red;
+  padding: 40px 0;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $dark;
+    transition: color 0.3s;
+    padding-bottom: 3px;
+    font-family: Roboto-Regular;
+    font-weight: 400;
+
+    &:hover {
+      color: $red;
+      border-bottom: 1px solid $red;
+    }
+
+    &--active {
+      color: $red;
+      border-bottom: 1px solid $red;
+      font-family: Roboto-Bold;
+      font-weight: 700;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    &::before {
+      content: "";
+      position: relative;
+      left: 50%;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--icon-user::before {
+      background-image: url(../images/icons/icon-user.svg);
+    }
+
+    &--icon-search::before {
+      background-image: url(../images/icons/icon-search.svg);
+    }
+
+    &--icon-heart::before {
+      background-image: url(../images/icons/icon-heart.svg);
+    }
+
+    &--icon-cart::before {
+      background-image: url(../images/icons/icon-cart.svg);
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $red;
+    color: $white;
+    top: 2px;
+    right: -2px;
+    font-size: 12px;
+    color: $white;
+    text-align: center;
+    line-height: 20px;
+  }
 }
