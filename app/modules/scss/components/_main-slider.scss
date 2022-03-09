@@ -1,0 +1,81 @@
+.main-slider {
+  background-image: url(../images/main-slider/decor.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: $grey-100;
+  padding: 65px 0 45px;
+
+  &__container {
+    max-width: 1560px;
+  }
+
+  &__content {
+    padding-left: 175px;
+    padding-top: 125px;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 670px;
+    color: $dark;
+    font-size: 58px;
+    line-height: 1.1;
+    font-family: Roboto-Bold;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+
+    li {
+      margin: 0 5px;
+      line-height: 0;
+
+      button {
+        padding: 0;
+        font-size: 0;
+        background-color: transporent;
+        height: 26px;
+        width: 26px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $grey;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-color: $red;
+
+          &::before {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}
