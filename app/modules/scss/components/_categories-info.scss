@@ -1,4 +1,4 @@
-.catigories-info {
+.categories-info {
   padding: 120px 0;
   background-color: $white;
   background-image: url("../images/decor/categories-decor-3.svg");
@@ -84,7 +84,7 @@
   }
 }
 
-.catigories {
+.categories {
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -94,20 +94,15 @@
   }
 
   &__item {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 35px 0 0 40px;
-
     &:nth-child(1) {
       grid-row: span 2;
 
-      .catigories__subtitle,
-      .catigories__link:hover {
+      .category-product__subtitle,
+      .category-product__link:hover {
         color: $purple;
       }
 
-      .catigories__link:hover {
+      .category-product__link:hover {
         border-bottom: 1px solid $purple;
       }
     }
@@ -119,12 +114,12 @@
       justify-content: center;
       padding-top: 0;
 
-      .catigories__subtitle,
-      .catigories__link:hover {
+      .category-product__subtitle,
+      .category-product__link:hover {
         color: $red;
       }
 
-      .catigories__link {
+      .category-product__link {
         width: fit-content;
 
         &:hover {
@@ -134,27 +129,34 @@
     }
 
     &:nth-child(3) {
-      .catigories__subtitle,
-      .catigories__link:hover {
+      .category-product__subtitle,
+      .category-product__link:hover {
         color: $yellow;
       }
 
-      .catigories__link:hover {
+      .category-product__link:hover {
         border-bottom: 1px solid $yellow;
       }
     }
 
     &:nth-child(4) {
-      .catigories__subtitle,
-      .catigories__link:hover {
+      .category-product__subtitle,
+      .category-product__link:hover {
         color: $blue;
       }
 
-      .catigories__link:hover {
+      .category-product__link:hover {
         border-bottom: 1px solid $blue;
       }
     }
   }
+}
+
+.category-product {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 35px 0 0 40px;
 
   &__title {
     font-size: 22px;
