@@ -63,3 +63,19 @@ body {
     background-color: rgba($red, 0.9);
   }
 }
+
+.title {
+  text-align: center;
+  font-family: Roboto-Bold;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: $dark;
+  margin-bottom: 10px;
+}
+
+.text {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto 65px;
+}
