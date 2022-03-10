@@ -49,18 +49,6 @@
     position: relative;
     z-index: 2;
 
-    &--icon-car::before {
-      background-image: url(../images/icons/icon-car.svg);
-    }
-
-    &--icon-time::before {
-      background-image: url(../images/icons/icon-time.svg);
-    }
-
-    &--icon-support::before {
-      background-image: url(../images/icons/icon-support.svg);
-    }
-
     &:before {
       content: "";
       position: absolute;
@@ -71,6 +59,18 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    &--icon-car::before {
+      background-image: url(../images/icons/icon-car.svg);
+    }
+
+    &--icon-time::before {
+      background-image: url(../images/icons/icon-time.svg);
+    }
+
+    &--icon-support::before {
+      background-image: url(../images/icons/icon-support.svg);
     }
   }
 
