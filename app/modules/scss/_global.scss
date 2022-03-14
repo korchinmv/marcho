@@ -221,6 +221,82 @@ body {
 	}
 }
 
+.blog-card {
+	max-width: 370px;
+	border: 1px solid $grey-200;
+	transition: all 0.2s;
+
+	&:hover {
+		box-shadow: 20px 0px 60px 0px rgba($grey-250, 0.35);
+		border: 1px solid $white;
+
+		.blog-card__link {
+			color: $red;
+
+			svg {
+				fill: $red;
+			}
+		}
+	}
+
+	&__box {
+		padding: 30px 40px;
+	}
+
+	&__img {
+		object-fit: contain;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__author,
+	&__date {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $grey;
+			margin-right: 7px;
+		}
+	}
+
+	&__title {
+		font-family: Roboto-Regular;
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 1.4;
+		color: $dark;
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		transition: color 0.2s;
+
+		&:hover {
+			color: $red;
+
+			svg {
+				fill: $red;
+			}
+		}
+
+		svg {
+			width: 10px;
+			height: 8px;
+			fill: $grey;
+			transition: fill 0.2s;
+		}
+	}
+}
+
 //CARDS ELEMENTS//
 .price {
 	display: flex;
