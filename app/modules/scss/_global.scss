@@ -1,81 +1,223 @@
+//GLOBAL//
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 body {
-  color: $grey;
-  background-color: $white;
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: Quicksand-Medium;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
+	color: $grey;
+	background-color: $white;
+	font-size: 16px;
+	line-height: 1.6;
+	font-family: Quicksand-Medium;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
 }
 
 .main {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .logo {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
+//BUTTONS//
 .btn {
-  background-color: $red;
-  color: $white;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 12px 25px;
-  font-family: Roboto-Regular;
-  font-weight: 400;
-  transition: background-color 0.2s;
-  box-shadow: 0px 7px 20px 0px rgba($red, 0.3);
-  letter-spacing: 2px;
+	background-color: $red;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 12px 25px;
+	font-family: Roboto-Regular;
+	font-weight: 400;
+	transition: background-color 0.2s;
+	letter-spacing: 2px;
+	border: 1px solid transparent;
 
-  &--slider {
-    padding: 14px 35px;
-  }
+	&--slider {
+		padding: 14px 35px;
+		box-shadow: 0px 7px 20px 0px rgba($red, 0.3);
 
-  &:hover {
-    background-color: rgba($red, 0.9);
-  }
+		&:hover {
+			background-color: rgba($red, 0.7);
+		}
+	}
+
+	&--transparent {
+		display: inline-block;
+		background-color: transparent;
+		border: 1px solid $red;
+		color: $dark;
+		transition: background-color 0.2s, color 0.2s;
+
+		&:hover {
+			background-color: $red;
+			color: $white;
+		}
+	}
 }
 
+//PAGE ELEMENTS//
 .title {
-  text-align: center;
-  font-family: Roboto-Bold;
-  font-weight: 700;
-  font-size: 48px;
-  text-transform: uppercase;
-  color: $dark;
-  margin-bottom: 10px;
+	text-align: center;
+	font-family: Roboto-Bold;
+	font-weight: 700;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: $dark;
+	margin-bottom: 10px;
 }
 
 .text {
-  text-align: center;
-  max-width: 570px;
-  margin: 0 auto 65px;
+	text-align: center;
+	max-width: 570px;
+	margin: 0 auto 65px;
+}
+
+//CARDS//
+.main-card {
+	max-width: 370px;
+	text-align: center;
+
+	&__img-box {
+		position: relative;
+		height: 370px;
+		overflow: hidden;
+		margin-bottom: 25px;
+
+		&:hover {
+			.main-card__link-box {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__link-box {
+		position: absolute;
+		background-color: $white;
+		box-shadow: 0px 5px 30px 0px rgba($grey-400, 0.2);
+		border-radius: 22px;
+		left: 0;
+		right: 0;
+		bottom: 50px;
+		width: 220px;
+		height: 50px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		transform: translateX(300%);
+		transition: transform 0.3s;
+	}
+
+	&__link {
+		display: inherit;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $dark;
+			transition: fill 0.2s;
+
+			&:hover {
+				fill: $red;
+			}
+		}
+
+		&:nth-child(2)::before,
+		&:nth-child(2)::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: $grey-200;
+			width: 1px;
+			height: 30px;
+			top: 10px;
+		}
+
+		&:nth-child(2)::before {
+			left: 70px;
+		}
+
+		&:nth-child(2)::after {
+			right: 70px;
+		}
+	}
+
+	&__image {
+		object-fit: contain;
+	}
+
+	&__title {
+		color: $dark;
+		font-size: 22px;
+		margin-bottom: 17px;
+	}
+
+	&--sale {
+		.main-card__img-box::before {
+			content: "SALE";
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			@extend %badge;
+		}
+	}
+
+	.star {
+		margin: 0 auto;
+		margin-bottom: 18px;
+	}
+}
+
+//CARDS ELEMENTS//
+.price {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Roboto-Medium;
+	font-weight: 500;
+
+	&__new,
+	&__old {
+		padding: 0 12px;
+	}
+
+	&__new {
+		color: $dark;
+	}
+
+	&__old {
+		color: $grey-225;
+		text-decoration: line-through;
+	}
+}
+
+.jq-ry-group {
+	svg:not(:last-child) {
+		margin-right: 3px;
+	}
 }

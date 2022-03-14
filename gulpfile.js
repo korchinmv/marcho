@@ -14,107 +14,108 @@ const fileInclude = require('gulp-file-include');
 
 
 function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: 'app/'
-    },
-    notify: false
-  })
+	browserSync.init({
+		server: {
+			baseDir: 'app/'
+		},
+		notify: false
+	})
 }
 
 function styles() {
-  return src('app/modules/scss/style.scss', { sourcemaps: true })
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('style.min.css'))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions'],
-      grid: true
-    }))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.stream());
+	return src('app/modules/scss/style.scss', { sourcemaps: true })
+		.pipe(scss({ outputStyle: 'compressed' }))
+		.pipe(concat('style.min.css'))
+		.pipe(autoprefixer({
+			overrideBrowserslist: ['last 10 versions'],
+			grid: true
+		}))
+		.pipe(dest('app/css'))
+		.pipe(browserSync.stream());
 }
 
 function scripts() {
-  return src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.js',  //подключаем слик к проекту
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', //подключаем фэнсибокс к проекту
-    'app/js/main.js'
-  ])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest('app/js'))
-    .pipe(browserSync.stream())
+	return src([
+		'node_modules/jquery/dist/jquery.js',
+		'node_modules/slick-carousel/slick/slick.js',  //подключаем слик к проекту
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', //подключаем фэнсибокс к проекту
+		'node_modules/rateyo/src/jquery.rateyo.js', //подключаем звездный рейтинг к проекту
+		'app/js/main.js'
+	])
+		.pipe(concat('main.min.js'))
+		.pipe(uglify())
+		.pipe(dest('app/js'))
+		.pipe(browserSync.stream())
 }
 
 function images() {
-  return src('app/images/**/*.*')
-    .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
-    ]))
-    .pipe(dest('dist/images'))
+	return src('app/images/**/*.*')
+		.pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeViewBox: true },
+					{ cleanupIDs: false }
+				]
+			})
+		]))
+		.pipe(dest('dist/images'))
 }
 
 function build() {
-  return src([
-    'app/**/*.html',
-    'app/css/style.min.css',
-    'app/js/main.min.js'
-  ], { base: 'app' })
-    .pipe(dest('dist'))
+	return src([
+		'app/**/*.html',
+		'app/css/style.min.css',
+		'app/js/main.min.js'
+	], { base: 'app' })
+		.pipe(dest('dist'))
 }
 
 function cleanDist() {
-  return del('dist')
+	return del('dist')
 }
 
 function svgSprites() {
-  return src('app/images/icons/*.svg')
-    .pipe(cheerio({
-      run: ($) => {
-        $("[fill]").removeAttr("fill");
-        $("[stroke]").removeAttr("stroke");
-        $("[style]").removeAttr("style");
-      },
-      parserOptions: { xmlMode: true },
-    })
-    )
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: '../sprite.svg',
-          },
-        },
-      })
-    )
-    .pipe(dest('app/images'));
+	return src('app/images/icons/*.svg')
+		.pipe(cheerio({
+			run: ($) => {
+				$("[fill]").removeAttr("fill");
+				$("[stroke]").removeAttr("stroke");
+				$("[style]").removeAttr("style");
+			},
+			parserOptions: { xmlMode: true },
+		})
+		)
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: '../sprite.svg',
+					},
+				},
+			})
+		)
+		.pipe(dest('app/images'));
 }
 
 const htmlInclude = () => {
-  return src(['app/modules/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
-    .pipe(fileInclude({
-      prefix: '@',
-      basepath: '@file',
-    }))
-    .pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
-    .pipe(browserSync.stream());
+	return src(['app/modules/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
+		.pipe(fileInclude({
+			prefix: '@',
+			basepath: '@file',
+		}))
+		.pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
+		.pipe(browserSync.stream());
 }
 
 function watching() {
-  watch(['app/modules/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/icons/*.svg'], svgSprites);
-  watch(['app/modules/html/**/*.html'], htmlInclude);
+	watch(['app/modules/scss/**/*.scss'], styles);
+	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+	watch(['app/**/*.html']).on('change', browserSync.reload);
+	watch(['app/images/icons/*.svg'], svgSprites);
+	watch(['app/modules/html/**/*.html'], htmlInclude);
 }
 
 exports.styles = styles;

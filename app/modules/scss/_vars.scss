@@ -1,13 +1,14 @@
-//COLORS
-
+//COLORS//
 $white: #fff;
 
 $dark: #29282d;
 
 $grey-100: #f6f6f6;
 $grey-200: #ececec;
+$grey-225: #ccccce;
 $grey-250: #cacaca;
 $grey-300: #c0c0c0;
+$grey-400: #989898;
 $grey: #8d8d8d;
 
 $purple: #5800e4;
@@ -17,3 +18,14 @@ $yellow: #ffb534;
 $blue: #34c3ff;
 
 $red: #fe3e57;
+
+//ELEMENTS//
+%badge {
+	background-color: $red;
+	padding: 6px 12px;
+	color: $white;
+	text-transform: uppercase;
+	font-family: Roboto-Regular;
+	font-weight: 400;
+	line-height: 1;
+}
