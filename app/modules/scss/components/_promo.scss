@@ -1,0 +1,24 @@
+.promo {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 150px 0 160px;
+	text-align: center;
+
+	&__inner {
+		max-width: 570px;
+		width: 100%;
+		margin-left: auto;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		color: $red;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__clock {
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,14 @@
+.partners {
+	padding: 75px 0;
+
+	&__list {
+		height: 170px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 150px;
+	}
+}
