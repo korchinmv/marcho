@@ -27,11 +27,17 @@
 		line-height: 1.1;
 		font-family: Roboto-Bold;
 		margin-bottom: 35px;
+		@include line-clamp(4);
 	}
 
 	&__text {
 		margin-bottom: 55px;
 		max-width: 470px;
+		@include line-clamp(4);
+	}
+
+	&__img {
+		object-fit: contain;
 	}
 
 	.slick-dots {
