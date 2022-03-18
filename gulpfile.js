@@ -40,6 +40,7 @@ function scripts() {
 		'node_modules/slick-carousel/slick/slick.js',  //подключаем слик к проекту
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', //подключаем фэнсибокс к проекту
 		'node_modules/rateyo/src/jquery.rateyo.js', //подключаем звездный рейтинг к проекту
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.js', //подключаем рэндж слайдер к проекту
 		'app/js/main.js'
 	])
 		.pipe(concat('main.min.js'))

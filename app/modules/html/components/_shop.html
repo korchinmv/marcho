@@ -1,0 +1,41 @@
+<section class="shop">
+	<div class="container">
+		<div class="shop__wrapper">
+
+			<div class="shop__filters filter">
+
+				<div class="filter-search filter__item">
+					<h3 class="filter__title">Search</h3>
+					<form class="filter-search__form" action="#">
+						<input class="filter-search__input" type="text" placeholder="Search your keyword...." required>
+						<button class="btn btn--search" type="submit">
+							<span class="sr-only">Search product</span>
+							<svg>
+								<use xlink:href="images/sprite.svg#icon-search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+
+				<div class="filter-price filter__item">
+					<h3 class="filter__title">Price filter</h3>
+					<form class="filter-price__form" action="#">
+						<input class="filter-price__input" type="text" data-min="0" data-max="999" data-from="200" data-to="800">
+						<lablel class="filter-price__label">
+							<span>Price:
+								$<span class="filter-price__from"></span> -
+								$<span class="filter-price__to"></span>
+							</span>
+							<button class="filter-price__btn btn" type="submit">Filter</button>
+						</lablel>
+					</form>
+
+				</div>
+			</div>
+
+			<div class="shop__content">
+
+			</div>
+		</div>
+	</div>
+</section>
