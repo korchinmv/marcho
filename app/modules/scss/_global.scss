@@ -364,6 +364,51 @@ body {
 	}
 }
 
+.filter-category {
+	&__label {
+		cursor: pointer;
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__input {
+		&:checked + .filter-category__checkbox {
+			background-color: $red;
+			color: $white;
+		}
+	}
+
+	&__checkbox {
+		background-color: $grey-100;
+		color: $dark;
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 20px;
+	}
+}
+
+.filter-tags {
+	&__label {
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 8px 35px 0;
+	}
+	&__input {
+		&:checked + .filter-tags__checkbox {
+			background-color: $red;
+			color: $white;
+			border-color: $red;
+		}
+	}
+	&__checkbox {
+		border: 1px solid $grey;
+		padding: 10px 20px;
+	}
+}
+
 //CARDS//
 .main-card {
 	max-width: 370px;
