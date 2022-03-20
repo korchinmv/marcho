@@ -38,6 +38,14 @@ body {
 	overflow: hidden;
 }
 
+.checkbox-hidden {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
 .logo {
 	&__img {
 		object-fit: contain;
@@ -289,12 +297,6 @@ body {
 	}
 
 	&__input {
-		width: 1px;
-		height: 1px;
-		position: absolute;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-
 		&:checked + .filter-color__checkbox {
 			background-image: url("../images/icons/icon-check.svg");
 			background-repeat: no-repeat;
@@ -331,6 +333,34 @@ body {
 		&--purple {
 			background-color: $purple-filter;
 		}
+	}
+}
+
+.filter-size {
+	&__label {
+		padding-left: 35px;
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	&__input {
+		&:checked + .filter-size__checkbox {
+			background-image: url(../images/icons/icon-checkmark.svg);
+			border: none;
+			& + .filter-size__name {
+				color: $red;
+			}
+		}
+	}
+
+	&__checkbox {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid $grey;
+		position: absolute;
+		margin-left: -35px;
+		margin-top: 2px;
 	}
 }
 
