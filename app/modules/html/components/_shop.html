@@ -219,13 +219,13 @@
 				<div class="shop-content__filter">
 					<div class="shop-content__btns">
 						View
-						<button class="shop-content__btn shop-content__btn--active">
+						<button class="shop-content__btn shop-content__btn--active btn-grid">
 							<svg class="grid">
 								<use xlink:href="images/sprite.svg#icon-grid"></use>
 							</svg>
 						</button>
 
-						<button class="shop-content__btn">
+						<button class="shop-content__btn btn-list">
 							<svg class="list">
 								<use xlink:href="images/sprite.svg#icon-list"></use>
 							</svg>
@@ -233,20 +233,483 @@
 					</div>
 
 					<div class="shop-content__selects">
-						<select class="shop-content__select-sort">
-							<option value="">Sort By Default</option>
-							<option value="">2</option>
-							<option value="">3</option>
-							<option value="">4</option>
-						</select>
+						<form class="shop-content__filter-form" action="#">
+							<select class="shop-content__select-sort select-style">
+								<option value="">Sort By Default</option>
+								<option value="">Sort By Default 2</option>
+								<option value="">Sort By Default 3</option>
+								<option value="">Sort By Default 4</option>
+							</select>
 
-						<select class="shop-content__select-show">
-							<option value="">Show 9</option>
-							<option value="">Show 12</option>
-							<option value="">Show 15</option>
-							<option value="">Show 18</option>
-						</select>
+							<select class="shop-content__select-show select-style">
+								<option value="">Show 9</option>
+								<option value="">Show 12</option>
+								<option value="">Show 15</option>
+								<option value="">Show 18</option>
+							</select>
+						</form>
 					</div>
+				</div>
+
+				<ul class="shop-content__products">
+					<li class="shop-content__item">
+						<article class="main-card">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/1.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/2.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/3.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/4.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/5.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/6.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/6.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/6.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/6.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="shop-content__item">
+						<article class="main-card main-card--sale">
+							<div class="main-card__img-box">
+								<img class="main-card__image" src="images/content/products/6.jpg" alt="product">
+								<div class="main-card__link-box">
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-search"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-bag"></use>
+										</svg>
+									</a>
+									<a class="main-card__link" href="#">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-heart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-card__wrapper-box">
+								<div class="main-card__box">
+									<span class="star" data-rateyo-rating="5"></span>
+									<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+									<div class="price">
+										<span class="price__new">$34.00</span>
+										<span class="price__old">$27.00</span>
+									</div>
+								</div>
+								<div class="main-card__content-box">
+									<p class="main-card__descr">
+										Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et dolore magna aliqua.
+									</p>
+									<button class="btn btn--dark">Add to card</button>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+
+				<div class="shop-content__pagination pagination">
+					<a class="pagination__arrows pagination__prev" href="#">Previous</a>
+
+					<ul class="pagination__list">
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">
+								1
+							</a>
+						</li>
+
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">
+								2
+							</a>
+						</li>
+
+						<li class="pagination__item">
+							<a class="pagination__link pagination__link--active" href="#">
+								3
+							</a>
+						</li>
+
+						<li class="pagination__item">
+							<span class="pagination__link" href="#">
+								....
+							</span>
+						</li>
+
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">
+								10
+							</a>
+						</li>
+					</ul>
+
+					<a class="pagination__arrows pagination__next" href="#">Next</a>
 				</div>
 			</div>
 
