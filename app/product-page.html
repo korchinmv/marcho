@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- <link rel="shortcut icon" href=""> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<header class="header">
+	<div class="container">
+		<nav class="header__nav">
+
+			<a class="logo" href="#">
+				<img class="logo__img" src="images/logo.png" alt="Логотип Марчо" width="183" height="30">
+			</a>
+
+			<ul class="menu">
+				<li class="menu__item">
+					<a class="menu__link menu__link--active" href="#">
+						Home
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="shop.html">
+						Shop
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Page
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Blog
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Contact
+					</a>
+				</li>
+			</ul>
+
+			<ul class="user-nav">
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-user" href="#"></a>
+					<span class="sr-only">Перейти в личный кабинет</span>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-search" href="#"></a>
+					<span class="sr-only">Поиск на сайте</span>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-heart" href="#">
+						<span class="user-nav__num">3</span>
+						<span class="sr-only">Избранные товары</span>
+					</a>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-cart" href="#">
+						<span class="user-nav__num">7</span>
+						<span class="sr-only">Корзина товаров</span>
+					</a>
+				</li>
+			</ul>
+
+		</nav>
+	</div>
+</header>
+	<main class="main">
+		<section class="promo-top">
+	<div class="promo-top__container" style="background-image: url('images/backgrounds/breadcrumbs-bg.jpg')">
+		<div class="container">
+			<h2 class="title">Product page</h2>
+			<div class="breadcrumbs">
+
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Home</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Product page</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="product-page">
+	<div class="container">
+		<div class="product-one">
+			<div class="product-one__wrapper">
+				<div class="product-one__slide product-slide">
+					<ul class="product-slide__thumb">
+						<li class="product-slide__thumb-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__thumb-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__thumb-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__thumb-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+					</ul>
+
+					<ul class="product-slide__big">
+						<li class="product-slide__big-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__big-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__big-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+
+						<li class="product-slide__big-item">
+							<img src="images/content/products/7.jpg" alt="Product">
+						</li>
+					</ul>
+				</div>
+
+				<div class="product-one__content">
+					<h2 class="product-one__title">Emboossed Packet Backpack</h2>
+					<div class="product-one__box">
+						<div class="product-one__price">
+							<span class="product-one__price-new">$19.00</span>
+							<span class="product-one__price-old">(29.00)</span>
+						</div>
+
+						<div class="product-one__star">
+							<span class="star" data-rateyo-rating="5"></span>
+							<span class="product-one__star-num">(22)</span>
+						</div>
+					</div>
+
+					<div class="product-one__descr">
+						<span class="product-one__descr-title">Review:</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipscg elit, sed do eiusmod tempor incididunt ut laborea et
+							dolore magna alqua. Quis ipsum suspendssem moa ultrices gravida.</p>
+					</div>
+
+					<form class="product-one__form product-filter" action="#">
+						<div class="product-filter__color">
+							<span class="product-filter__title">Color:</span>
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color" checked>
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #00aeef;"></span>
+								</span>
+							</label>
+
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color">
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #f52574;"></span>
+								</span>
+							</label>
+
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color">
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #24d4ac;"></span>
+								</span>
+							</label>
+
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color">
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #ff7e00;"></span>
+								</span>
+							</label>
+
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color">
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #000;"></span>
+								</span>
+							</label>
+
+							<label class="product-filter__color-label">
+								<input class="product-filter__color-input" type="radio" name="color">
+								<span class="product-filter__color-checkbox">
+									<span style="background-color: #923899;"></span>
+							</label>
+						</div>
+
+						<div class="product-filter__size">
+							<span class="product-filter__title">Size:</span>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">S</span>
+							</label>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">M</span>
+							</label>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">L</span>
+							</label>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">XS</span>
+							</label>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">XL</span>
+							</label>
+
+							<label class="product-filter__size-label">
+								<input class="product-filter__size-input" type="radio" name="size">
+								<span class="product-filter__size-checkbox">XXL</span>
+							</label>
+						</div>
+
+						<div class="product-one__info product-info">
+							<ul class="product-info__list">
+								<li class="product-info__item">
+									<div class="product-info__title">SKU</div>
+									<div class="product-info__text">11FSE7739</div>
+								</li>
+
+								<li class="product-info__item">
+									<div class="product-info__title">Categories</div>
+									<div class="product-info__text">Woman</div>
+								</li>
+
+								<li class="product-info__item">
+									<div class="product-info__title">Tags</div>
+									<div class="product-info__text">
+										<a href="#">Fashion</a> |
+										<a href="#">Woman</a> |
+										<a href="#">Sale</a>
+									</div>
+								</li>
+
+								<li class="product-info__item">
+									<div class="product-info__title">Share</div>
+									<div class="product-info__text">
+										<ul class="social-list product-info__social-list">
+											<li class="social-list__item">
+												<a class="social-list__link" href="#">
+													<svg>
+														<use xlink:href="images/sprite.svg#icon-facebook"></use>
+													</svg>
+												</a>
+											</li>
+
+											<li class="social-list__item">
+												<a class="social-list__link" href="#">
+													<svg>
+														<use xlink:href="images/sprite.svg#icon-twitter"></use>
+													</svg>
+												</a>
+											</li>
+
+											<li class="social-list__item">
+												<a class="social-list__link" href="#">
+													<svg>
+														<use xlink:href="images/sprite.svg#icon-pinterest"></use>
+													</svg>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<input class="product-one__num" type="number" value="1" min="1">
+						<button class="product-one__btn btn" type="submit">Add to cart</button>
+					</form>
+
+
+				</div>
+			</div>
+
+
+			<div class="product-tabs">
+				<div class="product-tabs__top">
+					<a class="product-tabs__top-item" href="#tab-1">Description</a>
+					<a class="product-tabs__top-item" href="#tab-2">Additional information</a>
+					<a class="product-tabs__top-item product-tabs__top-item--active" href="#tab-3">Reviews</a>
+				</div>
+
+				<div class="product-tabs__content">
+					<div class="product-tabs__content-item" id="tab-1">
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus vitae explicabo accusantium corrupti
+							illo reprehenderit architecto hic officia velit modi!</p>
+					</div>
+					<div class="product-tabs__content-item" id="tab-2">
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non quia quod. Laudantium autem provident
+							voluptas eveniet aliquam repellat quis commodi? Ex minima eaque ab commodi beatae, illum, nostrum vero
+							molestiae recusandae facilis accusamus deserunt.</p>
+					</div>
+					<div class="product-tabs__content-item product-tabs__content-item--active" id="tab-3">
+						<div class="comment">
+							<img class="comment__img" src="images/avatars/1.jpg" alt="Avatar">
+							<div class="comment__content">
+								<div class="comment__top">
+									<div class="comment__name">Michle Jhon</div>
+									<time class="comment__time">2 days ago</time>
+									<span class="comment__star star" data-rateyo-rating="4"></span>
+								</div>
+
+								<p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo
+									viverra
+									maeenas accumsan lacus vel facilisis. </p>
+
+								<a class="comment__reply" href="#">Reply</a>
+							</div>
+						</div>
+
+						<div class="comment">
+							<img class="comment__img" src="images/avatars/2.jpg" alt="Avatar">
+							<div class="comment__content">
+								<div class="comment__top">
+									<div class="comment__name">Michle Jhon</div>
+									<time class="comment__time">5 days ago</time>
+									<span class="comment__star star" data-rateyo-rating="4"></span>
+								</div>
+
+								<p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo
+									viverra
+									maeenas accumsan lacus vel facilisis. </p>
+
+								<a class="comment__reply" href="#">Reply</a>
+							</div>
+						</div>
+
+						<div class="comment">
+							<img class="comment__img" src="images/avatars/3.jpg" alt="Avatar">
+							<div class="comment__content">
+								<div class="comment__top">
+									<div class="comment__name">Michle Jhon</div>
+									<time class="comment__time">7 days ago</time>
+									<span class="comment__star star" data-rateyo-rating="2"></span>
+								</div>
+
+								<p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Qus ipsum speissei ultrices gravida. Risus commodo
+									viverra
+									maeenas accumsan lacus vel facilisis. </p>
+
+								<a class="comment__reply" href="#">Reply</a>
+							</div>
+						</div>
+
+						<form class="comment-form" action="#">
+							<h3 class="comment-form__title">Add your review</h3>
+
+							<div class="comment-form__rating">
+								<span class="comment-form__rating-title">Your Rating</span>
+								<label class="comment-form__label">
+									<input class="comment-form__input" type="radio" name="star">
+									<span class="comment-form__radio">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+									</span>
+								</label>
+
+								<label class="comment-form__label">
+									<input class="comment-form__input" type="radio" name="star">
+									<span class="comment-form__radio">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+									</span>
+								</label>
+
+								<label class="comment-form__label">
+									<input class="comment-form__input" type="radio" name="star">
+									<span class="comment-form__radio">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+									</span>
+								</label>
+
+								<label class="comment-form__label">
+									<input class="comment-form__input" type="radio" name="star">
+									<span class="comment-form__radio">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+									</span>
+								</label>
+
+								<label class="comment-form__label">
+									<input class="comment-form__input" type="radio" name="star" checked>
+									<span class="comment-form__radio">
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+										<svg>
+											<use xlink:href="images/sprite.svg#icon-star"></use>
+										</svg>
+									</span>
+								</label>
+							</div>
+
+							<div class="comment-form__box-input">
+								<input class="comment-form__text-input" placeholder="Your name" type="text">
+								<input class="comment-form__text-input" placeholder="E-mail address" type="email">
+							</div>
+							<textarea class="comment-form__textarea" placeholder="Your text here"></textarea>
+							<button class="comment-form__btn btn" type="submit">Leave Review</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+		<section class="related">
+	<div class="container">
+		<h3 class="related__title title">Related products</h3>
+		<ul class="related__list">
+			<li class="related__item">
+				<article class="main-card main-card--sale">
+					<div class="main-card__img-box">
+						<img class="main-card__image" src="images/content/products/2.jpg" alt="product" width="370" height="370">
+					</div>
+
+					<div class="main-card__wrapper-box">
+						<div class="main-card__box">
+							<span class="star" data-rateyo-rating="5"></span>
+							<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+							<div class="price">
+								<span class="price__new">$34.00</span>
+								<span class="price__old">$27.00</span>
+							</div>
+						</div>
+					</div>
+				</article>
+			</li>
+
+			<li class="related__item">
+				<article class="main-card">
+					<div class="main-card__img-box">
+						<img class="main-card__image" src="images/content/products/3.jpg" alt="product" width="370" height="370">
+					</div>
+
+					<div class="main-card__wrapper-box">
+						<div class="main-card__box">
+							<span class="star" data-rateyo-rating="5"></span>
+							<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+							<div class="price">
+								<span class="price__new">$34.00</span>
+								<span class="price__old">$27.00</span>
+							</div>
+						</div>
+					</div>
+				</article>
+			</li>
+
+			<li class="related__item">
+				<article class="main-card">
+					<div class="main-card__img-box">
+						<img class="main-card__image" src="images/content/products/5.jpg" alt="product" width="370" height="370">
+					</div>
+
+					<div class="main-card__wrapper-box">
+						<div class="main-card__box">
+							<span class="star" data-rateyo-rating="5"></span>
+							<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+							<div class="price">
+								<span class="price__new">$34.00</span>
+								<span class="price__old">$27.00</span>
+							</div>
+						</div>
+					</div>
+				</article>
+			</li>
+
+			<li class="related__item">
+				<article class="main-card main-card--sale">
+					<div class="main-card__img-box">
+						<img class="main-card__image" src="images/content/products/6.jpg" alt="product" width="370" height="370">
+					</div>
+
+					<div class="main-card__wrapper-box">
+						<div class="main-card__box">
+							<span class="star" data-rateyo-rating="5"></span>
+							<h3 class="main-card__title">White Polo Men’s T-Shirt</h3>
+							<div class="price">
+								<span class="price__new">$34.00</span>
+								<span class="price__old">$27.00</span>
+							</div>
+						</div>
+					</div>
+				</article>
+			</li>
+		</ul>
+	</div>
+</section>
+	</main>
+	<footer class="footer">
+	<div class="container">
+		<div class="footer-top">
+
+			<div class="footer-top__item">
+				<a class="logo footer-top__logo" href="">
+					<img class="logo__img" src="images/logo.png" alt="logo" width="183" height="30">
+				</a>
+
+				<address class="footer-top__box footer-top__contact">
+
+					<ul class="adress-links footer-top__adress-links">
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="#">
+								No. 342 - London Oxford Street,
+								012 United States
+							</a>
+						</li>
+
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+						</li>
+
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="tel:+02838388393">+0283 838 8393</a>
+						</li>
+					</ul>
+
+					<ul class="social-list footer-top__social">
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-google"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-pinterest"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</address>
+
+			</div>
+
+			<div class="footer-top__item footer-top__nav">
+				<h5 class="footer-top__title footer-top__title">Useful Links</h5>
+
+				<ul class="footer-top__list">
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">About Us</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Privacy Policy</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Terms & Conditions</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Contact Us</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Help & Support</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer-top__item footer-top__nav">
+				<h5 class="footer-top__title footer-top__title">My Account</h5>
+
+				<ul class="footer-top__list">
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My Account</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My Cart</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My WIshlist</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Registration</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Check Out</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer-top__item footer-top__form">
+				<h5 class="footer-top__title">Subscribe Our Newsletter</h5>
+
+				<div class="footer-top__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+				</div>
+
+				<form class="subscribe-form" action="#">
+					<label class="sr-only" for="form-subscribe">Форма подписки клиентов</label>
+					<input class="subscribe-form__input" type="email" name="form-subscribe" id="form-subscribe"
+						placeholder="Your email address" required>
+					<button class="btn subscribe-form__btn" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<span class="copy">© 2019 CodeAstrology. All Rights Reserved.</span>
+
+			<div class="accept">
+				We Accept
+				<img class="accept__img" src="images/pay/mastercard.png" alt="We accept MasterCard">
+				<img class="accept__img" src="images/pay/visa.png" alt="We accept Visa">
+				<img class="accept__img" src="images/pay/paypal.png" alt="We accept PayPal">
+			</div>
+		</div>
+
+	</div>
+</footer>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

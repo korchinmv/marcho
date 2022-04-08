@@ -3,6 +3,7 @@ $white: #fff;
 
 $dark: #29282d;
 
+$grey-50: #f0f0f0;
 $grey-100: #f6f6f6;
 $grey-200: #ececec;
 $grey-225: #ccccce;
@@ -39,4 +40,14 @@ $purple-filter: #923899;
 	font-family: Roboto-Regular;
 	font-weight: 400;
 	line-height: 1;
+}
+
+//ANOTHER//
+%checkbox-hidden,
+%radio-hidden {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
 }

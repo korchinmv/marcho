@@ -38,7 +38,8 @@ body {
 	overflow: hidden;
 }
 
-.checkbox-hidden {
+.checkbox-hidden,
+.radio-hidden {
 	width: 1px;
 	height: 1px;
 	position: absolute;
@@ -112,7 +113,7 @@ body {
 		transition: background-color 0.2s, box-shadow 0.2s;
 		font-family: Roboto-Regular;
 		font-weight: 400;
-		
+
 		&:hover {
 			background-color: $red;
 			box-shadow: 0px 7px 20px 0px rgba($red, 0.3);
@@ -123,8 +124,8 @@ body {
 //PAGE ELEMENTS//
 .title {
 	text-align: center;
-	font-family: Roboto-Bold;
-	font-weight: 700;
+	font-family: Roboto-Regular;
+	font-weight: 400;
 	font-size: 48px;
 	text-transform: uppercase;
 	color: $dark;
@@ -229,7 +230,6 @@ body {
 
 	&__arrows {
 		text-transform: uppercase;
-		
 	}
 
 	&__prev,
@@ -266,7 +266,7 @@ body {
 	}
 }
 
-//FILTETS//
+//FILTERS//
 .filter {
 	&__item {
 		padding: 35px 30px 40px;
@@ -482,6 +482,76 @@ body {
 	}
 }
 
+.product-filter {
+	&__title {
+		margin-bottom: 5px;
+		font-size: 18px;
+		color: $dark;
+		display: block;
+		font-family: Roboto-Regular;
+		font-weight: 400;
+	}
+
+	&__color {
+		margin-bottom: 20px;
+	}
+
+	&__color-label,
+	&__size-label {
+		margin-right: 10px;
+		display: inline-block;
+	}
+
+	&__color-input {
+		@extend %radio-hidden;
+		&:checked {
+			& + .product-filter__color-checkbox {
+				border-color: $red;
+			}
+		}
+	}
+
+	&__color-checkbox {
+		width: 24px;
+		height: 24px;
+		border: 1px solid $grey-225;
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			top: 3px;
+			left: 3px;
+		}
+	}
+
+	&__size {
+		margin-bottom: 20px;
+	}
+
+	&__size-input {
+		@extend %radio-hidden;
+		&:checked {
+			& + .product-filter__size-checkbox {
+				border-color: $red;
+			}
+		}
+	}
+
+	&__size-checkbox {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		border: 1px solid $grey-225;
+		cursor: pointer;
+	}
+}
 //CARDS//
 .main-card {
 	width: 370px;
@@ -534,9 +604,9 @@ body {
 			border: 1px solid $grey-200;
 			border-left: none;
 		}
-		
+
 		.main-card__content-box {
-			display:block;
+			display: block;
 		}
 
 		.main-card__box {
@@ -555,11 +625,11 @@ body {
 
 		.price {
 			order: -1;
-			margin-left: -12px;		
+			margin-left: -12px;
 		}
 
 		.star {
-			margin: 0 0 0 23px;	
+			margin: 0 0 0 23px;
 		}
 
 		.main-card__descr {
@@ -778,4 +848,95 @@ body {
 	svg:not(:last-child) {
 		margin-right: 3px;
 	}
+}
+
+//PRODUCT ELEMENTS//
+.product-info {
+	&__list {
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		min-width: 100px;
+		color: $dark;
+	}
+
+	&__social-list {
+		margin-left: -13px;
+	}
+}
+
+//STEPPER//
+.jq-number__field {
+	width: 114px;
+	border: 1px solid $grey-50;
+	transform: translateY(1px);
+}
+
+.jq-number__field input {
+	width: 100%;
+	height: 50px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: $dark;
+	text-align: center;
+}
+
+.jq-number {
+	padding: 0;
+	position: relative;
+}
+
+.jq-number__spin {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.jq-number__spin.minus {
+	left: 15px;
+}
+
+.jq-number__spin.plus {
+	right: 15px;
+}
+
+.jq-number__spin:after {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 0;
+	width: 12px;
+	height: 1px;
+	background-color: $dark;
+}
+
+.jq-number__spin.minus::after {
+	left: 0;
+	top: 6px;
+}
+
+.jq-number__spin.plus::after {
+	right: 15px;
+	top: 6px;
+}
+
+.jq-number__spin.plus::before {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 12px;
+	background-color: $dark;
+	top: 0;
+	left: 6px;
 }

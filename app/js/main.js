@@ -1,4 +1,28 @@
 $(function () {
+	$('.product-tabs__top-item').on('click', function (e) {   //ТАБЫ//
+		e.preventDefault();  //Отключаем нажатие (переход) по ссылке//
+		$('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+		$(this).addClass('product-tabs__top-item--active');
+
+		$('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+		$($(this).attr('href')).addClass('product-tabs__content-item--active');
+	});
+
+	$('.product-slide__thumb').slick({
+		asNavFor: '.product-slide__big',    //соединить 2 слайдера между собой//
+		focusOnSelect: true,
+		slidesToScroll: 1,
+		slidesToShow: 4,
+		vertical: true,
+		draggable: false,
+	});
+
+	$('.product-slide__big').slick({
+		asNavFor: '.product-slide__thumb',  //соединить 2 слайдера между собой//
+		draggable: false,
+		fade: true,
+		arrows: false,
+	});
 
 	$('.shop-content__btn').on('click', function () {
 		$('.shop-content__btn').removeClass('shop-content__btn--active');
@@ -15,7 +39,7 @@ $(function () {
 		$('.shop-content__item').removeClass('shop-content__item--list')
 	});
 
-	$('.select-style').styler();
+	$('.select-style, .product-one__num').styler();
 
 	$('.filter-price__input').ionRangeSlider({
 		type: "double",
@@ -96,5 +120,4 @@ $(function () {
 
 	const deadline = $('.promo-clock').attr('data-time');
 	initializeClock('promo-clock', deadline);
-
 });
