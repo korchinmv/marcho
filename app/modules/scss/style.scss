@@ -1,6 +1,6 @@
 @import "fonts";
 @import "vars";
-@import "mixin";
+@import "mixins";
 @import "reset";
 @import "libs";
 @import "global";
@@ -14,12 +14,13 @@
 @import "./components/promo";
 @import "./components/partners";
 @import "./components/blog";
-
 @import "./components/promo-top";
 @import "./components/login";
 @import "./components/404-page";
 @import "./components/shop";
 @import "./components/product";
 @import "./components/related-products";
+@import "./components/blog-list";
+@import "./components/blog-page";
 
 @import "./components/footer";

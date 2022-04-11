@@ -1,4 +1,11 @@
 $(function () {
+	$('.blog-publication__slider').slick({
+		prevArrow: '<button type="button" class="blog-publication__slick-prev"><svg><use xlink:href="images/sprite.svg#icon-angle-left"></use></svg></button>',
+		nextArrow: '<button type="button" class="blog-publication__slick-next"><svg><use xlink:href="images/sprite.svg#icon-angle-left"></use></svg></button>',
+		infinite: false,
+
+	});
+
 	$('.product-tabs__top-item').on('click', function (e) {   //ТАБЫ//
 		e.preventDefault();  //Отключаем нажатие (переход) по ссылке//
 		$('.product-tabs__top-item').removeClass('product-tabs__top-item--active');

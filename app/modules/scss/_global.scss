@@ -266,6 +266,100 @@ body {
 	}
 }
 
+.person {
+	border: 1px solid $grey-200;
+	padding: 40px 25px 15px;
+	text-align: center;
+
+	&__img {
+		display: inline-block;
+		width: 160px;
+		height: 160px;
+		object-fit: cover;
+		margin-bottom: 30px;
+	}
+
+	&__name {
+		font-family: Roboto-Bold;
+		font-weight: 700;
+		font-size: 18px;
+		color: $dark;
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+
+	&__position {
+		color: $red;
+		margin-bottom: 25px;
+	}
+
+	&__descr {
+		margin-bottom: 10px;
+	}
+
+	&__social-list {
+		justify-content: center;
+	}
+}
+
+.latest-post {
+	padding: 35px 30px 40px;
+	border: 1px solid $grey-200;
+	font-family: Roboto-Regular;
+	font-weight: 400;
+
+	&__title {
+		font-size: 22px;
+		text-transform: uppercase;
+		color: $dark;
+		margin-bottom: 35px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+
+		& + .latest-post__item {
+			border-top: 1px solid $grey-200;
+			padding-top: 20px;
+		}
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link-img {
+		display: block;
+		margin-right: 20px;
+		min-width: 80px;
+	}
+
+	&__img {
+		object-fit: cover;
+	}
+
+	&__box-title {
+		font-size: 18px;
+		color: $dark;
+	}
+
+	&__time {
+		font-size: 16px;
+		padding-left: 26px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: url(../images/icons/icon-calendar.svg);
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
 //FILTERS//
 .filter {
 	&__item {
@@ -766,27 +860,6 @@ body {
 		object-fit: contain;
 	}
 
-	&__info {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
-	}
-
-	&__author,
-	&__date {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		svg {
-			width: 20px;
-			height: 20px;
-			fill: $grey;
-			margin-right: 7px;
-		}
-	}
-
 	&__title-link {
 		flex: 1;
 	}
@@ -821,6 +894,128 @@ body {
 	}
 }
 
+.blog-publication {
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: 0px 20px 60px 0px rgba($grey-250, 0.35);
+	}
+
+	&__link {
+		display: block;
+		transition: color 0.3s;
+		position: relative;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+	}
+
+	&__box {
+		border: 1px solid $grey-200;
+		border-top: none;
+		padding: 40px;
+	}
+
+	&__title {
+		color: $dark;
+		font-family: Roboto-Medium;
+		font-weight: 500;
+		line-height: 1.4;
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	&--play-video {
+		.blog-publication__play-btn {
+			position: absolute;
+			display: block;
+			width: 80px;
+			height: 80px;
+			background-color: $white;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $red;
+
+				svg {
+					fill: $white;
+				}
+			}
+
+			svg {
+				transition: fill 0.3s;
+				width: 23px;
+				height: 26px;
+				fill: $red;
+			}
+		}
+	}
+
+	&--slider {
+		.blog-publication__box {
+			margin-top: -8px;
+		}
+
+		.blog-publication__slick-prev,
+		.blog-publication__slick-next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $red;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0px 7px 20px 0px rgba($grey-325, 0.3);
+			z-index: 5;
+
+			svg {
+				width: 9px;
+				height: 14px;
+				fill: $white;
+			}
+		}
+
+		.blog-publication__slick-prev {
+			left: 40px;
+		}
+
+		.blog-publication__slick-next {
+			right: 40px;
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+
+		.slick-disabled {
+			background-color: $white;
+
+			svg {
+				fill: $red;
+			}
+		}
+	}
+
+	&--no-image {
+		.blog-publication__box {
+			border: 1px solid $grey-200;
+		}
+	}
+}
 //CARDS ELEMENTS//
 .price {
 	display: flex;
@@ -841,6 +1036,28 @@ body {
 	&__old {
 		color: $grey-225;
 		text-decoration: line-through;
+	}
+}
+
+.blog-box {
+	width: 290px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+
+	&__author,
+	&__date {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $grey;
+			margin-right: 7px;
+		}
 	}
 }
 

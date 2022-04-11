@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- <link rel="shortcut icon" href=""> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<header class="header">
+	<div class="container">
+		<nav class="header__nav">
+
+			<a class="logo" href="#">
+				<img class="logo__img" src="images/logo.png" alt="Логотип Марчо" width="183" height="30">
+			</a>
+
+			<ul class="menu">
+				<li class="menu__item">
+					<a class="menu__link menu__link--active" href="#">
+						Home
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="shop.html">
+						Shop
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Page
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Blog
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Contact
+					</a>
+				</li>
+			</ul>
+
+			<ul class="user-nav">
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-user" href="#"></a>
+					<span class="sr-only">Перейти в личный кабинет</span>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-search" href="#"></a>
+					<span class="sr-only">Поиск на сайте</span>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-heart" href="#">
+						<span class="user-nav__num">3</span>
+						<span class="sr-only">Избранные товары</span>
+					</a>
+				</li>
+
+				<li class="user-nav__item">
+					<a class="user-nav__link user-nav__link--icon-cart" href="#">
+						<span class="user-nav__num">7</span>
+						<span class="sr-only">Корзина товаров</span>
+					</a>
+				</li>
+			</ul>
+
+		</nav>
+	</div>
+</header>
+	<main class="main">
+		<section class="promo-top">
+	<div class="promo-top__container" style="background-image: url('images/backgrounds/breadcrumbs-bg.jpg')">
+		<div class="container">
+			<h2 class="title">Blog standard</h2>
+			<div class="breadcrumbs">
+
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Home</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Blog page</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="blog-list">
+	<div class="container">
+		<div class="blog-list__wrapper">
+			<ul class="blog-list__content">
+
+				<li class="blog-list__item">
+					<article class="blog-publication">
+						<a class="blog-publication__link" href="#">
+							<img class="blog-publication__img" src="images/blog/page-1.jpg" alt="blog image" width="770" height="450">
+						</a>
+						<div class="blog-publication__box">
+
+							<h3 class="blog-publication__title">
+								<a class="blog-publication__link" href="#"> Be prepared to sweat a lot, but at least in the Southern
+									regions there’s a good chance you’ll get to
+									enjoy!
+								</a>
+							</h3>
+
+							<div class="blog-box">
+								<a class="blog-box__author" href="#">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-user"></use>
+									</svg>
+									By Admin
+								</a>
+
+								<time class="blog-box__date">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-clock"></use>
+									</svg>
+									10 January, 2020</time>
+							</div>
+							<div class="blog-publication__descr">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+									et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas
+									acchmsan lacus vel facilis</p>
+							</div>
+						</div>
+					</article>
+				</li>
+
+				<li class="blog-list__item">
+					<article class="blog-publication blog-publication--play-video">
+						<a class="blog-publication__link" data-fancybox data-width="2048" data-height="1365"
+							href="https://www.youtube.com/watch?v=T7VqJoea0W8">
+							<img class="blog-publication__img" src="images/blog/page-2.jpg" alt="blog image" width="770" height="450">
+
+							<span class="blog-publication__play-btn">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-play"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="blog-publication__box">
+
+							<h3 class="blog-publication__title">
+								<a class="blog-publication__link" href="#"> Be prepared to sweat a lot, but at least in the Southern
+									regions there’s a good chance you’ll get to
+									enjoy!
+								</a>
+							</h3>
+
+							<div class="blog-box">
+								<a class="blog-box__author" href="#">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-user"></use>
+									</svg>
+									By Admin
+								</a>
+
+								<time class="blog-box__date">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-clock"></use>
+									</svg>
+									10 January, 2020</time>
+							</div>
+							<div class="blog-publication__descr">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+									et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas
+									acchmsan lacus vel facilis</p>
+							</div>
+						</div>
+					</article>
+				</li>
+
+				<li class="blog-list__item">
+					<article class="blog-publication blog-publication--slider">
+						<div class="blog-publication__slider">
+							<img class="blog-publication__img" src="images/blog/page-3.jpg" alt="blog image" width="770" height="450">
+							<img class="blog-publication__img" src="images/blog/page-2.jpg" alt="blog image" width="770" height="450">
+							<img class="blog-publication__img" src="images/blog/page-1.jpg" alt="blog image" width="770" height="450">
+						</div>
+						<div class="blog-publication__box">
+
+							<h3 class="blog-publication__title">
+								<a class="blog-publication__link" href="#"> Be prepared to sweat a lot, but at least in the Southern
+									regions there’s a good chance you’ll get to
+									enjoy!
+								</a>
+							</h3>
+
+							<div class="blog-box">
+								<a class="blog-box__author" href="#">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-user"></use>
+									</svg>
+									By Admin
+								</a>
+
+								<time class="blog-box__date">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-clock"></use>
+									</svg>
+									10 January, 2020</time>
+							</div>
+							<div class="blog-publication__descr">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+									et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas
+									acchmsan lacus vel facilis</p>
+							</div>
+						</div>
+					</article>
+				</li>
+
+				<li class="blog-list__item">
+					<article class="blog-publication blog-publication--no-image">
+						<div class="blog-publication__box">
+
+							<h3 class="blog-publication__title">
+								<a class="blog-publication__link" href="#"> Be prepared to sweat a lot, but at least in the Southern
+									regions there’s a good chance you’ll get to
+									enjoy!
+								</a>
+							</h3>
+
+							<div class="blog-box">
+								<a class="blog-box__author" href="#">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-user"></use>
+									</svg>
+									By Admin
+								</a>
+
+								<time class="blog-box__date">
+									<svg>
+										<use xlink:href="images/sprite.svg#icon-clock"></use>
+									</svg>
+									10 January, 2020</time>
+							</div>
+							<div class="blog-publication__descr">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+									et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas
+									acchmsan lacus vel facilis</p>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>
+
+			<aside class="blog-list__aside filter">
+				<div class="filter-search filter__item">
+					<h3 class="filter__title">Search</h3>
+					<form class="filter-search__form" action="#">
+						<input class="filter-search__input" type="text" placeholder="Search your keyword...." required>
+						<button class="btn btn--search" type="submit">
+							<span class="sr-only">Search product</span>
+							<svg>
+								<use xlink:href="images/sprite.svg#icon-search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+
+				<div class="person blog-list__person">
+					<img class="person__img" src="images/avatars/ceo.jpg" alt="avatar">
+					<div class="person__name">Tom D. Maianay</div>
+					<div class="person__position">CEO & Founder</div>
+					<div class="person__descr">
+						<p>Lorem ipsum dolor sit amet, consectetum adipiscing eit, sed do eiusmod temporary incididunt ut labore et
+							dolore magnaamo aliqua. Qus ipsum suspendisse ultrices an gravida. Risus commodo</p>
+					</div>
+
+					<ul class="social-list person__social-list">
+						<li class="social-list__item">
+							<a class="social-list__link" href="https://facebook.com/" target="_blank">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="https://twitter.com/" target="_blank">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="https://instagram.com/" target="_blank">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="https://pinterest.com/" target="_blank">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-pinterest"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="latest-post blog-list__latest-post">
+					<h3 class="latest-post__title">Latest Post</h3>
+
+					<li class="latest-post__item">
+						<article class="latest-post__card">
+							<a class="latest-post__link-img" href="#">
+								<img class="latest-post__img" src="images/blog/last-post/1.jpg" alt="Last post image" width="80"
+									height="80">
+							</a>
+
+							<div class="latest-post__box">
+								<a class="latest-post__title-link" href="#">
+									<h4 class="latest-post__box-title">Lorem ipsum dolor suitabl amet, adiping elit.</h4>
+								</a>
+								<time class="latest-post__time">16 Feb, 2019</time>
+							</div>
+						</article>
+					</li>
+
+					<li class="latest-post__item">
+						<article class="latest-post__card">
+							<a class="latest-post__link-img" href="#">
+								<img class="latest-post__img" src="images/blog/last-post/2.jpg" alt="Last post image" width="80"
+									height="80">
+							</a>
+
+							<div class="latest-post__box">
+								<a class="latest-post__title-link" href="#">
+									<h4 class="latest-post__box-title">Lorem ipsum dolor suitabl amet, adiping elit.</h4>
+								</a>
+								<time class="latest-post__time">16 Feb, 2019</time>
+							</div>
+						</article>
+					</li>
+
+					<li class="latest-post__item">
+						<article class="latest-post__card">
+							<a class="latest-post__link-img" href="#">
+								<img class="latest-post__img" src="images/blog/last-post/3.jpg" alt="Last post image" width="80"
+									height="80">
+							</a>
+
+							<div class="latest-post__box">
+								<a class="latest-post__title-link" href="#">
+									<h4 class="latest-post__box-title">Lorem ipsum dolor suitabl amet, adiping elit.</h4>
+								</a>
+								<time class="latest-post__time">16 Feb, 2019</time>
+							</div>
+						</article>
+					</li>
+
+					<li class="latest-post__item">
+						<article class="latest-post__card">
+							<a class="latest-post__link-img" href="#">
+								<img class="latest-post__img" src="images/blog/last-post/4.jpg" alt="Last post image" width="80"
+									height="80">
+							</a>
+
+							<div class="latest-post__box">
+								<a class="latest-post__title-link" href="#">
+									<h4 class="latest-post__box-title">Lorem ipsum dolor suitabl amet, adiping elit.</h4>
+								</a>
+								<time class="latest-post__time">16 Feb, 2019</time>
+							</div>
+						</article>
+					</li>
+
+				</ul>
+
+				<div class="filter-category filter__item">
+					<h3 class="filter__title">Category</h3>
+					<form class="filter-category__form" action="#">
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox">
+							<div class="filter-category__checkbox">
+								<span>Woman</span>
+								<span>48</span>
+							</div>
+						</label>
+
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox">
+							<div class="filter-category__checkbox">
+								<span>Man</span>
+								<span>30</span>
+							</div>
+						</label>
+
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox" checked>
+							<div class="filter-category__checkbox">
+								<span>Sale Products</span>
+								<span>92</span>
+							</div>
+						</label>
+
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox">
+							<div class="filter-category__checkbox">
+								<span>Fashion</span>
+								<span>121</span>
+							</div>
+						</label>
+
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox">
+							<div class="filter-category__checkbox">
+								<span>Hot Dresses</span>
+								<span>52</span>
+							</div>
+						</label>
+
+						<label class="filter-category__label">
+							<input class="filter-category__input checkbox-hidden" type="checkbox">
+							<div class="filter-category__checkbox">
+								<span>Accessories</span>
+								<span>88</span>
+							</div>
+						</label>
+				</div>
+
+				<div class="filter-tags filter__item">
+					<h3 class="filter__title">Popular Tags</h3>
+					<form class="filter-tags__form" action="#">
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox">
+							<span class="filter-tags__checkbox">Sweetshirt</span>
+						</label>
+
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox" checked>
+							<span class="filter-tags__checkbox">Man Accessories</span>
+						</label>
+
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox">
+							<span class="filter-tags__checkbox">Fashion</span>
+						</label>
+
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox">
+							<span class="filter-tags__checkbox">Polo</span>
+						</label>
+
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox">
+							<span class="filter-tags__checkbox">T-Shirt</span>
+						</label>
+
+						<label class="filter-tags__label">
+							<input class="filter-tags__input checkbox-hidden" type="checkbox">
+							<span class="filter-tags__checkbox">Jewellery</span>
+						</label>
+					</form>
+
+				</div>
+			</aside>
+		</div>
+	</div>
+</section>
+	</main>
+	<footer class="footer">
+	<div class="container">
+		<div class="footer-top">
+
+			<div class="footer-top__item">
+				<a class="logo footer-top__logo" href="">
+					<img class="logo__img" src="images/logo.png" alt="logo" width="183" height="30">
+				</a>
+
+				<address class="footer-top__box footer-top__contact">
+
+					<ul class="adress-links footer-top__adress-links">
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="#">
+								No. 342 - London Oxford Street,
+								012 United States
+							</a>
+						</li>
+
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+						</li>
+
+						<li class="adress-links__items">
+							<a class="adress-links__link" href="tel:+02838388393">+0283 838 8393</a>
+						</li>
+					</ul>
+
+					<ul class="social-list footer-top__social">
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-google"></use>
+								</svg>
+							</a>
+						</li>
+
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg>
+									<use xlink:href="images/sprite.svg#icon-pinterest"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</address>
+
+			</div>
+
+			<div class="footer-top__item footer-top__nav">
+				<h5 class="footer-top__title footer-top__title">Useful Links</h5>
+
+				<ul class="footer-top__list">
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">About Us</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Privacy Policy</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Terms & Conditions</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Contact Us</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Help & Support</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer-top__item footer-top__nav">
+				<h5 class="footer-top__title footer-top__title">My Account</h5>
+
+				<ul class="footer-top__list">
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My Account</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My Cart</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">My WIshlist</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Registration</a>
+					</li>
+
+					<li class="footer-top__list-item">
+						<a class="footer-top__link" href="#">Check Out</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer-top__item footer-top__form">
+				<h5 class="footer-top__title">Subscribe Our Newsletter</h5>
+
+				<div class="footer-top__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+				</div>
+
+				<form class="subscribe-form" action="#">
+					<label class="sr-only" for="form-subscribe">Форма подписки клиентов</label>
+					<input class="subscribe-form__input" type="email" name="form-subscribe" id="form-subscribe"
+						placeholder="Your email address" required>
+					<button class="btn subscribe-form__btn" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<span class="copy">© 2019 CodeAstrology. All Rights Reserved.</span>
+
+			<div class="accept">
+				We Accept
+				<img class="accept__img" src="images/pay/mastercard.png" alt="We accept MasterCard">
+				<img class="accept__img" src="images/pay/visa.png" alt="We accept Visa">
+				<img class="accept__img" src="images/pay/paypal.png" alt="We accept PayPal">
+			</div>
+		</div>
+
+	</div>
+</footer>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>
