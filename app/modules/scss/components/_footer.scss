@@ -86,7 +86,7 @@ footer {
 
 .social-list {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 
 	&__item:not(:last-child) {
 		margin-right: 5px;
@@ -96,8 +96,8 @@ footer {
 		width: 34px;
 		height: 44px;
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 	}
 
 	svg {

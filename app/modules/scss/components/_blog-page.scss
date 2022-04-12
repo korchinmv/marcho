@@ -1,0 +1,95 @@
+.blog-article {
+	max-width: 770px;
+
+	&__text {
+		border: 1px solid $grey-200;
+		border-top: none;
+		padding: 30px;
+
+		h4 {
+			color: $dark;
+			font-size: 22px;
+			font-family: Roboto-Medium;
+			font-weight: 500;
+			margin: 25px 0;
+		}
+
+		p {
+			margin: 25px 0;
+		}
+
+		blockquote {
+			background-color: $grey-100;
+			border-left: 3px solid $red;
+			color: $dark;
+			font-family: Roboto-Regular;
+			font-weight: 400;
+			font-size: 22px;
+			margin: 25px 0;
+			padding: 35px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		margin-bottom: 25px;
+	}
+
+	&__link {
+		margin-right: 30px;
+		display: flex;
+		align-items: center;
+
+		svg {
+			width: 16px;
+			height: 16px;
+			fill: $red;
+			margin-right: 10px;
+		}
+	}
+
+	&__img-left {
+		object-fit: contain;
+		float: left;
+		margin: 0 30px 10px 0;
+	}
+
+	&__img-right {
+		object-fit: contain;
+		float: right;
+		margin: 0 0 10px 30px;
+	}
+
+	&__form-title {
+		text-transform: uppercase;
+		margin: 35px 0 25px;
+		color: $dark;
+		font-size: 24px;
+		font-family: Roboto-Bold;
+		font-weight: 700;
+	}
+
+	&__box {
+		margin: 25px 0 35px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__tags,
+	&__share {
+		span {
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $dark;
+		}
+	}
+
+	&__author {
+		margin-bottom: 40px;
+	}
+
+	.comment-form__text-input {
+		max-width: 370px;
+	}
+}

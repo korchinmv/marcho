@@ -360,6 +360,27 @@ body {
 		}
 	}
 }
+
+.blog-author {
+	border-bottom: 1px solid $grey-200;
+	padding-bottom: 40px;
+	display: flex;
+	align-items: center;
+
+	&__img {
+		margin-right: 30px;
+		object-fit: cover;
+	}
+
+	&__name {
+		font-family: Roboto-Medium;
+		font-weight: 500;
+		font-size: 22px;
+		text-transform: uppercase;
+		color: $dark;
+		margin-bottom: 10px;
+	}
+}
 //FILTERS//
 .filter {
 	&__item {
@@ -646,6 +667,7 @@ body {
 		cursor: pointer;
 	}
 }
+
 //CARDS//
 .main-card {
 	width: 370px;
@@ -896,6 +918,7 @@ body {
 
 .blog-publication {
 	transition: box-shadow 0.3s;
+	max-width: 770px;
 
 	&:hover {
 		box-shadow: 0px 20px 60px 0px rgba($grey-250, 0.35);
@@ -1016,6 +1039,7 @@ body {
 		}
 	}
 }
+
 //CARDS ELEMENTS//
 .price {
 	display: flex;
