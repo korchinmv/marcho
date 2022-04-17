@@ -138,4 +138,16 @@ $(function () {
 	}
 
 	window.initMap = initMap;
+
+
+
 });
+
+
+let buttonClose = document.querySelector('.btn-close');
+let menuActive = document.querySelector('.menu');
+
+buttonClose.onclick = function () {
+	menuActive.classList.toggle('menu--active');
+	buttonClose.classList.toggle('btn-close--active');
+}

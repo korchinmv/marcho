@@ -121,6 +121,63 @@ body {
 	}
 }
 
+.btn-close {
+	width: 44px;
+	height: 44px;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	display: none;
+
+	@include mq("tablet", max) {
+		display: flex;
+		order: 1;
+		margin-left: 25px;
+	}
+
+	@include mq("phone", max) {
+		order: 0;
+	}
+
+	span,
+	&::after,
+	&::before {
+		content: "";
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		width: 30px;
+		left: 7px;
+		transition: transform 0.4s;
+		background-color: $dark;
+	}
+
+	&::before {
+		top: 12px;
+	}
+
+	&::after {
+		bottom: 12px;
+	}
+
+	&--active::before {
+		transform: rotate(45deg);
+		top: 21px;
+	}
+
+	&--active::after {
+		transform: rotate(-45deg);
+		bottom: 21px;
+	}
+
+	&--active span {
+		transform: scale(0);
+	}
+}
+
 //PAGE ELEMENTS//
 .title {
 	text-align: center;

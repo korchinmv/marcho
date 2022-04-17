@@ -5,6 +5,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	&--grey {
@@ -15,8 +16,41 @@
 .menu {
 	display: flex;
 
+	@include mq("tablet", max) {
+		transform: translateY(-200%);
+		position: absolute;
+		background-color: $white;
+		left: 0;
+		right: 0;
+		top: 120px;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		z-index: 5;
+		transition: all 0.3s;
+
+		&.menu--active {
+			transform: translateY(0);
+			transition: all 0.3s;
+		}
+	}
+
+	@include mq("phone", max) {
+		top: 150px;
+	}
+
+	&__item {
+		@include mq("tablet", max) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
 	&__item:not(:last-child) {
 		margin-right: 35px;
+		@include mq("tablet", max) {
+			margin-right: 0;
+		}
 	}
 
 	&__link {
@@ -27,9 +61,19 @@
 		font-family: Roboto-Regular;
 		font-weight: 400;
 
+		@include mq("tablet", max) {
+			display: block;
+			padding: 12px 0;
+		}
+
 		&:hover {
 			color: $red;
 			border-bottom: 1px solid $red;
+
+			@include mq("tablet", max) {
+				color: $dark;
+				border-bottom: none;
+			}
 		}
 
 		&--active {
@@ -37,6 +81,13 @@
 			border-bottom: 1px solid $red;
 			font-family: Roboto-Bold;
 			font-weight: 700;
+
+			@include mq("tablet", max) {
+				color: $dark;
+				border-bottom: none;
+				font-family: Roboto-Regular;
+				font-weight: 400;
+			}
 		}
 	}
 }
@@ -44,6 +95,16 @@
 .user-nav {
 	display: flex;
 	align-items: center;
+
+	@include mq("tablet", max) {
+		margin-left: auto;
+	}
+
+	@include mq("phone", max) {
+		width: 100%;
+		margin-top: 15px;
+		justify-content: flex-end;
+	}
 
 	&__item {
 		position: relative;
