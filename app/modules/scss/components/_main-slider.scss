@@ -13,11 +13,25 @@
 	&__content {
 		padding-left: 175px;
 		padding-top: 125px;
+
+		@include mq("desktop-s", max) {
+			padding: 40px 0 0 15px;
+		}
+
+		@include mq("tablet-s", max) {
+			padding: 0 0 50px 15px;
+		}
 	}
 
 	&__item {
 		display: flex !important;
 		justify-content: space-between;
+
+		.main-slider__img {
+			@include mq("tablet-s", max) {
+				display: none;
+			}
+		}
 	}
 
 	&__title {
@@ -28,22 +42,44 @@
 		font-family: Roboto-Bold;
 		margin-bottom: 35px;
 		@include line-clamp(4);
+
+		@include mq("tablet", max) {
+			font-size: 42px;
+			margin-bottom: 15px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 34px;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
 		margin-bottom: 55px;
 		max-width: 470px;
 		@include line-clamp(4);
+
+		@include mq("tablet", max) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__img {
 		object-fit: contain;
+
+		@include mq("desktop-s", max) {
+			width: 40%;
+		}
 	}
 
 	.slick-dots {
 		display: flex;
 		justify-content: center;
 		margin-top: -70px;
+
+		@include mq("tablet-s", max) {
+			margin-top: 0;
+		}
 
 		li {
 			margin: 0 5px;

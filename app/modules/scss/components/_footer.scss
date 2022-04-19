@@ -206,5 +206,9 @@ footer {
 		display: inline;
 		margin-left: 25px;
 		vertical-align: middle;
+
+		@include mq("phone", max) {
+			margin-left: 10px;
+		}
 	}
 }

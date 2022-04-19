@@ -1,14 +1,31 @@
 .partners {
 	padding: 75px 0 25px;
 
+	@include mq("desktop-s", max) {
+		padding: 25px 0;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin: 10px 35px;
+		}
+
+		@include mq("phone", max) {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+
 	&__list {
 		height: 170px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
+		flex-wrap: wrap;
 
-	&__item:not(:last-child) {
-		margin-right: 150px;
+		@include mq("tablet-s", max) {
+			justify-content: center;
+			height: auto;
+		}
 	}
 }

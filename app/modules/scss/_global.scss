@@ -187,6 +187,19 @@ body {
 	text-transform: uppercase;
 	color: $dark;
 	margin-bottom: 10px;
+
+	@include mq("tablet", max) {
+		font-size: 40px;
+	}
+
+	@include mq("tablet-s", max) {
+		font-size: 32px;
+	}
+
+	@include mq("phone", max) {
+		font-size: 26px;
+		line-height: 1.2;
+	}
 }
 
 .text {
@@ -201,6 +214,11 @@ body {
 	align-items: center;
 	margin-top: 55px;
 
+	@include mq("tablet-s", max) {
+		margin-top: 20px;
+		justify-content: center;
+	}
+
 	&__item {
 		background-color: $white;
 		width: 120px;
@@ -212,11 +230,26 @@ body {
 		align-items: center;
 		box-shadow: 0px 10px 40px 0px rgba($grey-350, 0.3);
 
+		@include mq("tablet-s", max) {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		@include mq("phone", max) {
+			width: 60px;
+			height: 60px;
+		}
+
 		span {
 			font-size: 48px;
 			font-family: Roboto-Bold;
 			line-height: 1;
 			color: $dark;
+
+			@include mq("phone", max) {
+				font-size: 18px;
+			}
 		}
 	}
 }
@@ -768,7 +801,7 @@ body {
 
 //CARDS//
 .main-card {
-	width: 370px;
+	max-width: 370px;
 	text-align: center;
 
 	&.main-card--list {
@@ -858,6 +891,10 @@ body {
 		overflow: hidden;
 		margin-bottom: 25px;
 
+		@include mq("desktop-s", max) {
+			margin-bottom: 10px;
+		}
+
 		&:hover {
 			.main-card__link-box {
 				transform: translateY(0);
@@ -881,6 +918,10 @@ body {
 		align-items: center;
 		transform: translateX(300%);
 		transition: transform 0.3s;
+
+		@include mq("tablet", max) {
+			transform: translateX(0);
+		}
 	}
 
 	&__link {
@@ -923,12 +964,21 @@ body {
 
 	&__image {
 		object-fit: cover;
+
+		@include mq("desktop-s", max) {
+			width: 100%;
+			object-position: top;
+		}
 	}
 
 	&__title {
 		color: $dark;
 		font-size: 22px;
 		margin-bottom: 17px;
+
+		@include mq("desktop-s", max) {
+			margin-bottom: 0;
+		}
 	}
 
 	&--sale {
@@ -944,6 +994,10 @@ body {
 	.star {
 		margin: 0 auto;
 		margin-bottom: 18px;
+
+		@include mq("desktop-s", max) {
+			margin-bottom: 5px;
+		}
 	}
 }
 
@@ -955,6 +1009,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	transition: all 0.2s;
+
+	@include mq("desktop-s", max) {
+		max-width: 100%;
+	}
 
 	&:hover {
 		box-shadow: 20px 0px 60px 0px rgba($grey-250, 0.35);
@@ -974,10 +1032,19 @@ body {
 		display: flex;
 		flex-direction: column;
 		flex: 1;
+
+		@include mq("desktop-s", max) {
+			padding: 15px;
+		}
 	}
 
 	&__img {
 		object-fit: contain;
+
+		@include mq("desktop-s", max) {
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__title-link {
@@ -992,6 +1059,10 @@ body {
 		color: $dark;
 		margin-bottom: 20px;
 		@include line-clamp(4);
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__link {
@@ -1162,11 +1233,19 @@ body {
 }
 
 .blog-box {
-	width: 290px;
+	max-width: 290px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 20px;
+
+	@include mq("tablet-s", max) {
+		margin-bottom: 10px;
+	}
+
+	@include mq("phone", max) {
+	}
 
 	&__author,
 	&__date {
@@ -1179,6 +1258,12 @@ body {
 			height: 20px;
 			fill: $grey;
 			margin-right: 7px;
+		}
+	}
+
+	&__author {
+		@include mq("phone", max) {
+			margin: 0 10px 10px 0;
 		}
 	}
 }

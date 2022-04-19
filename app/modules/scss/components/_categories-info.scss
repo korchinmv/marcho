@@ -5,6 +5,10 @@
 	background-repeat: no-repeat;
 	background-position: center left;
 
+	@include mq("desktop-s", max) {
+		padding: 80px 0;
+	}
+
 	&__inner {
 		background-image: url("../images/decor/categories-decor-4.svg");
 		background-repeat: no-repeat;
@@ -15,8 +19,14 @@
 .support {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-bottom: 110px;
 	position: relative;
+
+	@include mq("desktop-s", max) {
+		justify-content: space-around;
+		margin-bottom: 70px;
+	}
 
 	&::before,
 	&::after {
@@ -39,6 +49,10 @@
 		right: -20px;
 		width: 65px;
 		height: 52px;
+
+		@include mq("desktop-s", max) {
+			right: 0;
+		}
 	}
 
 	&__item {
@@ -48,6 +62,18 @@
 		width: 370px;
 		position: relative;
 		z-index: 2;
+
+		@include mq("desktop-s", max) {
+			width: 340px;
+			padding: 100px 20px 20px;
+			margin: 0 10px 20px 10px;
+		}
+
+		&:last-child {
+			@include mq("desktop-s", max) {
+				margin-bottom: 0;
+			}
+		}
 
 		&:before {
 			content: "";
@@ -59,6 +85,11 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
+
+			@include mq("desktop-s", max) {
+				top: 20px;
+				left: 20px;
+			}
 		}
 
 		&--icon-car::before {
@@ -82,10 +113,19 @@
 		color: $dark;
 		margin-bottom: 15px;
 		@include line-clamp(2);
+
+		@include mq("phone", max) {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
 		@include line-clamp(6);
+
+		@include mq("phone", max) {
+			margin-bottom: 40px;
+		}
 	}
 }
 
@@ -96,11 +136,44 @@
 		grid-template-rows: repeat(2, 1fr);
 		grid-gap: 30px;
 		min-height: 635px;
+
+		@include mq("desktop-s", max) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+		}
+
+		@include mq("tablet-s", max) {
+			min-height: 385px;
+		}
+
+		@include mq("phone", max) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 10px;
+		}
 	}
 
 	&__item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+
+		@include mq("tablet-s", max) {
+			background-image: none !important;
+		}
+
 		&:nth-child(1) {
 			grid-row: span 2;
+
+			@include mq("desktop-s", max) {
+				grid-row: auto;
+			}
+
+			@include mq("tablet-s", max) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #eedeef;
+			}
 
 			.category-product__subtitle,
 			.category-product__link:hover {
@@ -119,6 +192,15 @@
 			justify-content: center;
 			padding-top: 0;
 
+			@include mq("desktop-s", max) {
+				grid-column: auto;
+				background-position: center right;
+			}
+
+			@include mq("tablet-s", max) {
+				background-color: #deeeef;
+			}
+
 			.category-product__subtitle,
 			.category-product__link:hover {
 				color: $red;
@@ -134,6 +216,13 @@
 		}
 
 		&:nth-child(3) {
+			@include mq("tablet-s", max) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #fef6a9;
+			}
+
 			.category-product__subtitle,
 			.category-product__link:hover {
 				color: $yellow;
@@ -145,6 +234,13 @@
 		}
 
 		&:nth-child(4) {
+			@include mq("tablet-s", max) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #ececec;
+			}
+
 			.category-product__subtitle,
 			.category-product__link:hover {
 				color: $blue;
@@ -158,15 +254,29 @@
 }
 
 .category-product {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
 	padding: 35px 0 0 40px;
+
+	@include mq("tablet-s", max) {
+		padding: 0 20px 0 20px;
+	}
+
+	@include mq("phone", max) {
+		padding: 20px;
+	}
 
 	&__title {
 		font-size: 22px;
 		color: $dark;
 		margin-bottom: 16px;
+
+		@include mq("tablet-s", max) {
+			line-height: 1.2;
+			margin-bottom: 10px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 18px;
+		}
 	}
 
 	&__link {
@@ -176,5 +286,9 @@
 		border-bottom: 1px solid transparent;
 		transition: border-bottom 0.1s;
 		padding-bottom: 3px;
+
+		@include mq("phone", max) {
+			font-size: 14px;
+		}
 	}
 }
