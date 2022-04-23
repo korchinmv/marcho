@@ -1,23 +1,53 @@
 .product-page {
 	padding: 120px 0 60px;
+
+	@include mq("desktop-s", max) {
+		padding: 80px 0 40px;
+	}
+
+	@include mq("phone", max) {
+		padding: 40px 0 30px;
+	}
 }
 
 .product-one {
 	border-bottom: 1px solid $grey-50;
 	padding-bottom: 60px;
 
+	@include mq("phone", max) {
+		padding-bottom: 30px;
+	}
+
 	&__wrapper {
 		display: flex;
+
+		@include mq("desktop-s", max) {
+			display: block;
+		}
 	}
 
 	&__slide {
 		width: 730px;
 		margin-right: 70px;
 		display: flex;
+
+		@include mq("desktop-s", max) {
+			width: auto;
+			margin-right: 0;
+		}
 	}
 
 	&__content {
 		width: 370px;
+
+		@include mq("desktop-s", max) {
+			width: 100%;
+			margin-top: 35px;
+		}
+
+		@include mq("phone", max) {
+			margin-top: 15px;
+		}
 	}
 
 	&__title {
@@ -33,11 +63,25 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 13px;
+
+		@include mq("desktop-s", max) {
+			max-width: 300px;
+		}
+
+		@include mq("phone", max) {
+			max-width: 240px;
+			display: block;
+		}
 	}
 
 	&__price {
 		display: flex;
 		font-size: 18px;
+	}
+
+	&__price-new,
+	&__price-old {
+		display: block;
 	}
 
 	&__price-new {
@@ -52,6 +96,12 @@
 	&__star {
 		display: flex;
 		align-items: center;
+
+		.jq-ry-container {
+			@include mq("phone", max) {
+				padding: 0;
+			}
+		}
 	}
 
 	&__star-num {
@@ -76,6 +126,11 @@
 
 	&__btn {
 		margin-left: 15px;
+
+		@include mq("phone", max) {
+			margin-left: 0;
+			margin-top: 10px;
+		}
 	}
 }
 
@@ -90,6 +145,10 @@
 	&__thumb {
 		width: 140px;
 		margin-right: 30px;
+
+		@include mq("desktop-s", max) {
+			display: none;
+		}
 	}
 
 	&__thumb-item {
@@ -108,10 +167,28 @@
 	&__big {
 		width: 560px;
 
+		@include mq("desktop-s", max) {
+			width: 100%;
+		}
+
 		img {
 			width: 560px;
 			height: 650px;
 			object-fit: cover;
+
+			@include mq("desktop-s", max) {
+				width: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			@include mq("tablet-s", max) {
+				height: 500px;
+			}
+
+			@include mq("phone", max) {
+				height: 400px;
+			}
 		}
 	}
 }
@@ -124,13 +201,27 @@
 		border-bottom: 1px solid $grey-50;
 		font-family: Roboto-Regular;
 		font-size: 22px;
+
+		@include mq("phone", max) {
+			display: block;
+			border-bottom: none;
+		}
 	}
 
 	&__top-item {
 		display: inline-block;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
+
+		@include mq("phone", max) {
+			display: block;
+		}
+
 		& + .product-tabs__top-item {
 			margin-left: 55px;
+
+			@include mq("phone", max) {
+				margin-left: 0;
+			}
 		}
 
 		&--active {
@@ -170,22 +261,35 @@
 		border-radius: 50%;
 		overflow: hidden;
 		object-fit: contain;
+
+		@include mq("phone", max) {
+			display: none;
+		}
 	}
 
 	&__top {
 		display: flex;
 		margin-bottom: 10px;
+		line-height: 1;
 	}
 
 	&__name {
 		color: $dark;
 		margin-right: 13px;
 		font-family: Roboto-Regular;
+
+		@include mq("phone", max) {
+			margin-right: 8px;
+		}
 	}
 
 	&__time {
 		padding-left: 13px;
 		position: relative;
+
+		@include mq("phone", max) {
+			padding-left: 8px;
+		}
 
 		&:before {
 			content: "";
@@ -193,9 +297,8 @@
 			display: block;
 			background-color: $grey;
 			width: 1px;
-			height: 14px;
+			height: 100%;
 			left: 0;
-			top: 5px;
 		}
 	}
 
@@ -260,11 +363,22 @@
 	&__rating-title {
 		margin-right: 60px;
 		color: $dark;
+
+		@include mq("tablet-s", max) {
+			margin-right: 10px;
+		}
+
+		@include mq("phone", max) {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__radio {
 		cursor: pointer;
 		position: relative;
+		line-height: 16px;
 
 		svg {
 			fill: $grey;
@@ -273,8 +387,21 @@
 		}
 	}
 
+	&__star {
+		display: none;
+
+		@include mq("phone", max) {
+			display: block;
+			margin-left: -5px;
+		}
+	}
+
 	&__label {
 		margin-right: 25px;
+
+		@include mq("phone", max) {
+			display: none;
+		}
 	}
 
 	&__input {
@@ -291,6 +418,11 @@
 		margin-bottom: 30px;
 		display: flex;
 		justify-content: space-between;
+
+		@include mq("phone", max) {
+			display: block;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__text-input {
@@ -299,6 +431,19 @@
 		display: inline-block;
 		padding: 0 20px;
 		border: 1px solid $grey-225;
+
+		@include mq("phone", max) {
+			width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-right: 20px;
+
+			@include mq("phone", max) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__textarea {
@@ -309,5 +454,9 @@
 		height: 225px;
 		resize: none;
 		margin-bottom: 40px;
+
+		@include mq("phone", max) {
+			margin-bottom: 20px;
+		}
 	}
 }

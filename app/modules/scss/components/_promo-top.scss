@@ -7,5 +7,14 @@
 		background-size: cover;
 		padding: 120px 0 130px;
 		text-align: center;
+
+		@include mq("desktop-s", max) {
+			background-image: none !important;
+			background-color: $grey-200;
+		}
+
+		@include mq("phone", max) {
+			padding: 60px 0 70px;
+		}
 	}
 }
