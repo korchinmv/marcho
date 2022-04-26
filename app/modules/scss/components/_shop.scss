@@ -150,6 +150,7 @@
 	text-shadow: none;
 	font-family: Quicksand-Medium;
 	font-size: 16px;
+
 	@include mq("phone", max) {
 		margin-left: 15px;
 	}
