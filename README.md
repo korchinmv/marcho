@@ -8,6 +8,7 @@
 - BEM
 - Gulp
 - адаптивная верстка
+- [ССЫЛКА НА ПРОЕКТ] https://korchinmv.github.io/marcho/app/
 
 **О проекте**
 
